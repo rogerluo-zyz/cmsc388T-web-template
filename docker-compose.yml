@@ -3,9 +3,12 @@ version: '3'
 services:
   nodejs:
     #fill out the configuration here
+    build: .
     networks:
       - app-network
-  
+    image: node-web-app
+    container_name: node-web-app
+
   #the nginx configuration is given below
   #the website will run on localhost:80 
   webserver:
@@ -28,7 +31,7 @@ volumes:
     driver_opts:
       type: none
       #fill out your absolute path to your folder here
-      device: /absolute/path/to/web/template/folder
+      device: /User/64112/cmsc388T-web-template
       o: bind
 
 networks:
