@@ -4,7 +4,7 @@ name: clone workflow
 
 # Controls when the action will run. 
 on:
-  workflow_dispatch:
+  workflow_dispatch: https://terpconnect.umd.edu/~rogerluo/cmsc388T-web-template/
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
