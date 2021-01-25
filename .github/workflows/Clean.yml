@@ -21,7 +21,7 @@ jobs:
           password: ${{ secrets.PASSWORD }}
           port: ${{ secrets.PORT }}
           script: |
-            unalias rm
             cd ..
             cd pub
+            unalias rm
             rm -rf cmsc388T-we-template
