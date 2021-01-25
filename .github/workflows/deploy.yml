@@ -1,0 +1,26 @@
+# This is a basic workflow to help you get started with Actions
+
+name: deployment workflow
+
+# Controls when the action will run. 
+on:
+  push:
+    branches: [master]
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  job_one:
+    name: Deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: testing
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.HOST}}
+          username:  ${{ secrets.USERNAME }}
+          password: ${{ secrets.PASSWORD }}
+          port: ${{ secrets.PORT }}
+          script: |
+            cd ../pub/cmsc388T-web-template
+            git pull https://github.com/rogerluo-zyz/cmsc388T-web-template.git
