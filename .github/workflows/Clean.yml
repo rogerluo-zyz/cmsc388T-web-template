@@ -24,4 +24,4 @@ jobs:
             cd ..
             cd pub
             unalias rm
-            rm -rf cmsc388T-we-template
+            rm -rf cmsc388T-web-template
