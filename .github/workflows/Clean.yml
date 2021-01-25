@@ -23,4 +23,5 @@ jobs:
           script: |
             unalias rm
             cd ..
+            cd pub
             rm -rf cmsc388T-we-template
